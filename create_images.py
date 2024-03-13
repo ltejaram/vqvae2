@@ -41,7 +41,7 @@ save_recon_path = f'{args.save_path}/{args.size}/{args.view}/{args.model_name}'
 os.makedirs(save_orig_path, exist_ok=True)
 os.makedirs(save_recon_path, exist_ok=True)
 if args.model_name == 'A':
-    model_dir = './HDF5_datasets/mimic/0/checkpoint/vqvae_010.pt'
+    model_dir = './vqvae2/Best Models/best_vqvae_model_A.pt'
     model = VQVAE(first_stride=4, second_stride=2).cuda() if cuda else VQVAE()
 elif args.model_name == 'B':
     model_dir = '/home/aisinai/work/VQ-VAE2/20200422/vq_vae/CheXpert/1/checkpoint/vqvae_040.pt'

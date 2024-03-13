@@ -34,7 +34,7 @@ Tensor = torch.cuda.FloatTensor if cuda else torch.FloatTensor
 
 # Load model
 #vqvae_path = f'/home/aisinai/work/VQ-VAE2/20200422/vq_vae/CheXpert/{args.train_run}/checkpoint/{args.vqvae_file}'
-vqvae_path='./HDF5_datasets/mimic/0/checkpoint/vqvae_010.pt'
+vqvae_path='./vqvae2/Best Models/best_vqvae_model_A.pt'
 if cuda:
     vqvae_pretrain = VQVAE(first_stride=args.first_stride, second_stride=args.second_stride,
                            embed_dim=args.embed_dim).cuda()
